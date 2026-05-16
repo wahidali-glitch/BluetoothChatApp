@@ -2,7 +2,7 @@
 
 ## Overview
 
-Bluetooth Chat App is an Android application developed for the CNDC course assignment. The app allows two Android devices to connect using Bluetooth, exchange real-time text messages, and transfer files such as images and PDFs.
+Bluetooth Chat App is an Android application developed for the CNDC course Tasks. The app allows two Android devices to connect using Bluetooth, exchange real-time text messages, and transfer files such as images and PDFs.
 
 The interface is designed to look like a modern messaging application, with message bubbles, timestamps, connection status, device list, file attachment support, and file transfer progress.
 
