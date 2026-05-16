@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F1923"
+    android:fitsSystemWindows="true">
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--              HEADER                    -->
+    <!-- ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#131F2E"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:background="#1A2840">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BT"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#00E5FF" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BLINK CHAT"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:letterSpacing="0.12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bluetooth  ·  Instant  ·  Secure"
+                    android:textSize="10sp"
+                    android:textColor="#00E5FF"
+                    android:letterSpacing="0.06" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="bottom">
+
+                <View android:layout_width="4dp" android:layout_height="8dp"
+                    android:background="#00E5FF" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="4dp" android:layout_height="13dp"
+                    android:background="#00E5FF" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="4dp" android:layout_height="19dp"
+                    android:background="#1DE9B6" android:layout_marginEnd="2dp"/>
+                <View android:layout_width="4dp" android:layout_height="25dp"
+                    android:background="#1DE9B6"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#1A2840"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:layout_marginTop="12dp">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="#FF5252"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status: Not Connected"
+                android:textSize="12sp"
+                android:textColor="#90A4AE"
+                android:letterSpacing="0.03" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OFFLINE"
+                android:textSize="9sp"
+                android:textColor="#FF5252"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="#2A1A1A" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--           ACTION BUTTONS               -->
+    <!-- ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnShowDevices"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="◈  PAIRED"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#00E5FF"
+            android:letterSpacing="0.08"
+            android:backgroundTint="#1A2840"
+            android:stateListAnimator="@null" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="▶  SERVER"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#1DE9B6"
+            android:letterSpacing="0.08"
+            android:backgroundTint="#00332A"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--           DEVICES SECTION              -->
+    <!-- ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="14dp"
+            android:background="#00E5FF"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AVAILABLE / PAIRED DEVICES"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:textColor="#546E7A"
+            android:letterSpacing="0.15" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listDevices"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#131F2E"
+        android:divider="#1A2840"
+        android:dividerHeight="1dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="2dp" />
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--           CHAT LABEL                   -->
+    <!-- ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="14dp"
+            android:background="#1DE9B6"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHAT MESSAGES"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:textColor="#546E7A"
+            android:letterSpacing="0.15" />
+
+    </LinearLayout>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--           CHAT SCROLL AREA             -->
+    <!-- ═══════════════════════════════════════ -->
+    <ScrollView
+        android:id="@+id/scrollChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0F1923"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dp" />
+
+    </ScrollView>
+
+    <!-- File Transfer Progress -->
+    <ProgressBar
+        android:id="@+id/progressFile"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone"
+        android:progressTint="#1DE9B6"
+        android:progressBackgroundTint="#1A2840" />
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--       BOTTOM MESSAGE BAR               -->
+    <!-- ═══════════════════════════════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#131F2E"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:elevation="16dp">
+
+        <Button
+            android:id="@+id/btnAttach"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="+"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#00E5FF"
+            android:textAllCaps="false"
+            android:backgroundTint="#1A2840"
+            android:stateListAnimator="@null"
+            android:padding="0dp" />
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Type a message..."
+            android:textSize="13sp"
+            android:textColor="#ECEFF1"
+            android:textColorHint="#37474F"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="#1A2840"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:inputType="textShortMessage" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="72dp"
+            android:layout_height="48dp"
+            android:text="➤"
+            android:textSize="20sp"
+            android:textColor="#1DE9B6"
+            android:textAllCaps="false"
+            android:backgroundTint="#003D33"
+            android:stateListAnimator="@null"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
