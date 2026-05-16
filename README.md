@@ -176,9 +176,7 @@ BluetoothChatApp/
 │   │   │   └── AndroidManifest.xml
 │   └── build.gradle.kts
 ├── gradle/
-├── screenshots/
-│   ├── screenshot-1.png
-│   └── screenshot-2.png
+├── screenshot-1.png
 ├── demo/
 │   └── demo-video.mp4
 ├── PROTOCOL_DESIGN.md
