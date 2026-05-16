@@ -1,44 +1,72 @@
 # Bluetooth Chat App
 
-Bluetooth Chat App is an Android-based Bluetooth communication project developed in Kotlin. The application allows two Android devices to discover nearby Bluetooth devices, connect with each other, exchange real-time text messages, and transfer files such as images or PDF documents.
+Bluetooth Chat App is a Kotlin-based Android application that enables two Android devices to communicate over Bluetooth. The application supports Bluetooth device discovery, peer-to-peer connection, real-time text messaging, and file transfer between connected devices.
 
-The project is designed with a simple messaging-style interface similar to modern chat applications. It includes device scanning, connection status updates, message bubbles, timestamps, file attachment support, and file transfer progress handling.
-
----
-
-## Project Overview
-
-This project demonstrates peer-to-peer communication between two Android devices using Bluetooth. The application focuses on building a practical communication system where one device can connect to another device and exchange both text and file data without using the internet.
-
-The main goal of this project is to understand how Bluetooth communication works in Android applications, including device discovery, pairing, socket-based communication, message handling, and file transfer.
+The project is designed with a clean messaging-style interface similar to modern chat applications. It demonstrates practical Bluetooth communication on real Android devices without requiring an internet connection.
 
 ---
 
-## Key Features
+## Overview
+
+This project demonstrates how two Android devices can connect through Bluetooth and exchange data directly. The application allows users to scan available Bluetooth devices, connect to a selected device, send and receive text messages, and transfer files such as images or PDF documents.
+
+The main purpose of this project is to understand Bluetooth-based communication in Android, including device discovery, socket connection, message exchange, file handling, and connection status management.
+
+---
+---
+
+## Project Structure
+
+```text
+BluetoothChatApp/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/example/bluetoothchatapp/
+│   │   │   │   ├── MainActivity.kt
+│   │   │   │   └── BluetoothService.kt
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml
+│   │   │   │   ├── drawable/
+│   │   │   │   ├── mipmap/
+│   │   │   │   └── values/
+│   │   │   └── AndroidManifest.xml
+│   └── build.gradle.kts
+├── gradle/
+├── screenshot-1.png
+├── demo/
+│   └── demo-video.mp4
+├── PROTOCOL_DESIGN.md
+├── README.md
+├── settings.gradle.kts
+└── build.gradle.kts
+
+## Features
 
 ### Device Discovery
-- Scans nearby Bluetooth devices.
-- Displays available paired Bluetooth devices.
-- Allows the user to select and connect to a device.
-- Shows scanning and connection status clearly.
+- Scan nearby Bluetooth devices.
+- Display available paired Bluetooth devices.
+- Select a device and establish a Bluetooth connection.
+- Show scanning and connection status to the user.
 
-### Text Messaging
-- Sends and receives text messages in real time.
-- Displays sent messages on the right side.
-- Displays received messages on the left side.
-- Shows message timestamps.
-- Provides a clean chat-style user interface.
+### Real-Time Text Messaging
+- Send and receive text messages between two connected Android devices.
+- Display sent messages on the right side.
+- Display received messages on the left side.
+- Show timestamps with messages.
+- Provide a simple chat-style user experience.
 
 ### File Transfer
-- Allows the user to select a file from the device.
-- Supports file sharing such as images and PDF files.
-- Transfers files between connected Bluetooth devices.
-- Shows file transfer progress during sending and receiving.
+- Select files from the Android device.
+- Send files such as images and PDF documents.
+- Receive files on the connected device.
+- Display transfer progress during file sending and receiving.
 
-### Connection Status
-- Displays connection states such as scanning, connected, disconnected, and failed.
-- Handles Bluetooth connection updates.
-- Provides feedback to the user during communication.
+### Connection Status Handling
+- Show connected, disconnected, scanning, and failed states.
+- Provide clear feedback during Bluetooth operations.
+- Support basic connection management between two devices.
 
 ---
 
@@ -53,30 +81,34 @@ The main goal of this project is to understand how Bluetooth communication works
 
 ---
 
-## Application Screenshots
+## Screenshot
 
 The screenshot below shows the working interface of the Bluetooth Chat App.
 
-| Bluetooth Chat App Interface |
-|---|
-| ![Bluetooth Chat App Screenshot](screenshot-1.png) |
+<p align="center">
+  <img src="screenshot-1.png" alt="Bluetooth Chat App Screenshot" width="350"/>
+</p>
 
 ---
 
 ## Demo Video
 
-A short demo video is included to show the working project on real Android devices.
+A demo video was recorded to show the complete working project on real Android devices.
 
 The video demonstrates:
 
-- Opening the project in Android Studio
-- Running the application on Android devices
+- Project files in Android Studio
+- Application running on Android devices
 - Bluetooth device discovery
-- Connecting two real devices
+- Connection between two real devices
 - Sending and receiving text messages
-- Sending and receiving a file
+- File transfer between devices
 
-> Demo video file path:
+> Note: The demo video is larger than GitHub browser upload limit, so it can be submitted separately or uploaded through a compressed version / external drive link.
+
+Expected demo video path if added later:
+
+
 
 ```text
 demo/demo-video.mp4
