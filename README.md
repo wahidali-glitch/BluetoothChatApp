@@ -226,6 +226,6 @@ GitHub: [@wahidali-glitch](https://github.com/wahidali-glitch)
 
 <div align="center">
 
-Made with ❤️ for CNDC Assignment — SZABIST Islamabad
+Made with ❤️ for CNDC and Android — SZABIST Islamabad
 
 </div>
